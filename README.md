@@ -3,7 +3,8 @@
 **home section**
 <img width="1842" height="667" alt="image" src="https://github.com/user-attachments/assets/e16fcfdf-856f-4288-9843-ec9f1614a29d" />
 **about us**
-<img width="1543" height="509" alt="image" src="https://github.com/user-attachments/assets/2d9b88c2-bcab-40c6-ad8b-9f5ab3087f53" />
+<img width="1498" height="497" alt="image" src="https://github.com/user-attachments/assets/b1a3829a-7947-4847-9021-491362f49323" />
+
 **project**
 <img width="1818" height="546" alt="image" src="https://github.com/user-attachments/assets/c9b47e45-2ded-4883-9ed5-cd599b97b728" />
 **contact**
