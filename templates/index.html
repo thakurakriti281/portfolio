@@ -11,6 +11,13 @@
 
 </head>
 <body>
+<!-- 3D BACKGROUND -->
+<div class="bg-3d">
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
 
 
 <header class="hero">
@@ -169,6 +176,69 @@
   </div>
 
 </section>
+<!-- EDUCATION SECTION -->
+<section id="education" class="education-section reveal">
+  <h2 class="section-title">Education</h2>
+
+  <div class="education-timeline">
+
+    <!-- BCA -->
+    <div class="edu-item">
+      <div class="edu-icon">
+        <i class="fa-solid fa-graduation-cap"></i>
+      </div>
+
+      <div class="edu-card">
+        <span class="edu-year">2023 – 2026</span>
+        <h3>Bachelor of Computer Applications (BCA)</h3>
+        <p class="edu-college">trinity college jalandha/r</p>
+
+        <p class="edu-desc">
+          Focused on programming, web development, databases, and software
+          engineering with hands-on project experience.
+        </p>
+
+        <div class="edu-stats">
+          <div>
+            <span class="counter" data-target="8.5">0</span>
+            <small>CGPA</small>
+          </div>
+          <div>
+            <span class="counter" data-target="85">0</span>
+            <small>Percentage</small>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 12th -->
+    <div class="edu-item">
+      <div class="edu-icon">
+        <i class="fa-solid fa-school"></i>
+      </div>
+
+      <div class="edu-card">
+        <span class="edu-year">2021 – 2023</span>
+        <h3>Higher Secondary (12th)</h3>
+        <p class="edu-college">pap school jalandhar</p>
+
+        <p class="edu-desc">
+          Completed higher secondary education with emphasis on bussiness studies,
+          computer science, and accountancy.
+        </p>
+
+        <div class="edu-stats">
+          <div>
+            <span class="counter" data-target="78">0</span>
+            <small>Percentage</small>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
 
 
 <!-- CONTACT BUTTON -->
@@ -195,6 +265,7 @@
 
 <footer>
   <p>© 2026 Akriti Thakur</p>
+  <p>gmail :thakurakriti281@gmail.com</p>
 </footer>
 
 
@@ -368,6 +439,38 @@ function closeResume() {
   document.getElementById("resumeModal").style.display = "none";
 }
 </script>
+<script>
+  const counters = document.querySelectorAll(".counter");
+
+  const runCounter = () => {
+    counters.forEach(counter => {
+      const target = +counter.dataset.target;
+      let count = 0;
+      const speed = target / 80;
+
+      const update = () => {
+        if (count < target) {
+          count += speed;
+          counter.innerText = Math.ceil(count);
+          requestAnimationFrame(update);
+        } else {
+          counter.innerText = target;
+        }
+      };
+      update();
+    });
+  };
+
+  window.addEventListener("scroll", () => {
+    if (document.getElementById("education")
+      .getBoundingClientRect().top < window.innerHeight - 100) {
+      runCounter();
+    }
+  }, { once: true });
+</script>
+
+
+
 
 </body>
 </html>
